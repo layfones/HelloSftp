@@ -14,5 +14,5 @@ allprojects {
   
 Step 2. Add the dependency
 dependencies {
-	        implementation 'com.github.layfones:HelloSftp:Tag'
+	        implementation 'com.github.layfones:HelloSftp:1.0.0'
 	}
