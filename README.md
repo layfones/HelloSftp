@@ -22,7 +22,7 @@ dependencies {
 	}
 ```
 
-## Step 3. use
+## Step 3. Use
 
 ```java
 SftpClient.with(new SftpUser()).upload(new Request("src", "dst", RESUME)).enqueue(new Callback() {
