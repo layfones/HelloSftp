@@ -1,5 +1,5 @@
 # HelloSftp
-##### 封装JSCH实现SFTP文件上传
+##### 封装JSCH实现Android SFTP文件上传
 
 [![](https://jitpack.io/v/layfones/HelloSftp.svg)](https://jitpack.io/#layfones/HelloSftp)
 
