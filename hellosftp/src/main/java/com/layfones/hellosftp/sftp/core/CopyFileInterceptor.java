@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 
 
 import com.jcraft.jsch.ChannelSftp;
+import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
 import com.layfones.hellosftp.sftp.Callback;
 import com.layfones.hellosftp.sftp.Interceptor;
@@ -40,8 +41,13 @@ public final class CopyFileInterceptor implements Interceptor {
             } else {
                 channelSftp.get(request.getSrcPath(), dstPath, new Monitor(callback), request.getMode());
             }
-            Log.d(SftpClient.TAG, "传输拦截器，完成传输 --" + this.getClass().getSimpleName());
             channelSftp.disconnect();
+            try {
+                channelSftp.getSession().disconnect();
+            } catch (JSchException e) {
+                e.printStackTrace();
+            }
+            Log.d(SftpClient.TAG, "传输拦截器，完成传输 --" + this.getClass().getSimpleName());
         }
     }
 
