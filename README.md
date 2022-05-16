@@ -19,7 +19,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.layfones:HelloSftp:1.0.0'
+    implementation 'com.github.layfones:HelloSftp:1.0.1'
 }
 ```
 
